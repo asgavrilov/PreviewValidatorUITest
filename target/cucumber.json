@@ -1,0 +1,110 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# new feature"
+      },
+      {
+        "line": 2,
+        "value": "# Tags: optional"
+      }
+    ],
+    "line": 5,
+    "elements": [
+      {
+        "line": 7,
+        "name": "go through the videos",
+        "description": "",
+        "id": "validate-that-every-video-item-has-a-preview;go-through-the-videos",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10343661078,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "open video.yandex.ru",
+            "match": {
+              "location": "MyStepdefs.openVideoYaPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8015307624,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "type \"фильмы\" value and submit Find button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "фильмы",
+                  "offset": 6
+                }
+              ],
+              "location": "MyStepdefs.typeValue(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5180814679,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "60 items are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "60",
+                  "offset": 0
+                }
+              ],
+              "location": "MyStepdefs.itemResults(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 245460952456,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "go through the items with mouse over action and make two screenshots",
+            "match": {
+              "location": "MyStepdefs.mouseAllItemsOver()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3746636967,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "compare screenshots",
+            "match": {
+              "location": "MyStepdefs.compareScreenshots()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Validate that every video item has a preview",
+    "description": "",
+    "id": "validate-that-every-video-item-has-a-preview",
+    "keyword": "Feature",
+    "uri": "preview.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@smoketest"
+      }
+    ]
+  }
+]
